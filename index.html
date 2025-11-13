@@ -181,3 +181,227 @@
 
 </body>
 </html>
+✅ Key Improvements
+Enlarged and fixed image display (width: 160px; height: 160px; object-fit: cover).
+
+Light modern background (#f5f7fa).
+
+Contact icons using Font Awesome.
+
+Better spacing and visual hierarchy.
+
+Cleaner, readable text and color balance.
+
+Would you like me to make it responsive for mobile (≤768px) too?
+
+
+
+
+
+
+
+Dito por si:
+now it is to white. i want some nice colors 
+
+
+
+Dito pelo ChatGPT:
+Got it — you want a modern, colorful, but not too bright academic look.
+Here’s an updated version with a calm professional palette — soft navy background, white content cards, and subtle teal/blue accents for contrast.
+It feels modern but keeps good readability and personality.
+
+🌈 Updated Design (modern color version)
+html
+Copiar código
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Diogo Pereira - Academic Site</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+  :root {
+    --bg-color: #1f2937;        /* soft dark blue-gray */
+    --card-bg: #273549;         /* darker card background */
+    --highlight: #00b4d8;       /* teal accent */
+    --text-light: #f1f5f9;
+    --text-medium: #cbd5e1;
+  }
+
+  body {
+    margin: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: var(--bg-color);
+    color: var(--text-light);
+  }
+
+  header {
+    background: #324256;
+    padding: 24px 48px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  }
+
+  .site-title {
+    font-size: 1.8em;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    color: var(--text-light);
+  }
+
+  nav {
+    display: flex;
+    gap: 32px;
+  }
+
+  nav a {
+    color: var(--text-medium);
+    text-decoration: none;
+    font-size: 1.05em;
+    transition: color 0.25s, border-bottom 0.25s;
+    padding: 6px 0;
+    cursor: pointer;
+  }
+
+  nav a:hover {
+    color: var(--highlight);
+    border-bottom: 2px solid var(--highlight);
+  }
+
+  .container {
+    display: flex;
+    max-width: 1100px;
+    margin: 40px auto 0 auto;
+    gap: 40px;
+  }
+
+  aside {
+    width: 280px;
+    background: var(--card-bg);
+    border-radius: 16px;
+    padding: 32px 24px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+    text-align: center;
+  }
+
+  aside img {
+    display: block;
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    margin: 0 auto 20px auto;
+    border: 4px solid var(--highlight);
+    object-fit: cover;
+    background-color: #fff;
+  }
+
+  .sidebar-info strong {
+    font-size: 1.3em;
+    color: #ffffff;
+  }
+
+  .sidebar-info {
+    line-height: 1.6;
+    margin-top: 8px;
+  }
+
+  .sidebar-info .area {
+    margin-top: 6px;
+    font-style: italic;
+    color: var(--highlight);
+    margin-bottom: 20px;
+  }
+
+  .contacts {
+    text-align: left;
+    margin-top: 16px;
+  }
+
+  .contacts a {
+    color: var(--highlight);
+    text-decoration: none;
+  }
+
+  .contacts a:hover {
+    text-decoration: underline;
+  }
+
+  .contacts i {
+    color: var(--highlight);
+    margin-right: 8px;
+  }
+
+  main {
+    flex: 1;
+    padding: 30px 30px;
+    background: var(--card-bg);
+    border-radius: 16px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+    min-height: 350px;
+  }
+
+  h2 {
+    color: var(--highlight);
+    margin-top: 0;
+  }
+
+  p {
+    color: var(--text-medium);
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="site-title">Diogo Pereira</div>
+  <nav>
+    <a onclick="showSection('about')">About Me</a>
+    <a onclick="showSection('research')">Research</a>
+    <a onclick="showSection('publications')">Publications</a>
+  </nav>
+</header>
+
+<div class="container">
+  <aside>
+    <img src="Imagem1.png" alt="Diogo Pereira Photo" />
+    <div class="sidebar-info">
+      <strong>Diogo Pereira</strong><br>
+      PhD Student at Instituto Superior Técnico
+      <div class="area">Area: Materials Engineering</div>
+
+      <div class="contacts">
+        <p><i class="fa-solid fa-envelope"></i> <a href="mailto:your@email.com">your@email.com</a></p>
+        <p><i class="fa-brands fa-linkedin"></i> <a href="https://linkedin.com/in/yourprofile">linkedin.com/in/yourprofile</a></p>
+        <p><i class="fa-brands fa-orcid"></i> <a href="https://orcid.org/your-orcid-id">orcid.org/your-orcid-id</a></p>
+      </div>
+    </div>
+  </aside>
+
+  <main>
+    <section id="about" class="active">
+      <h2>About Me</h2>
+      <p>This is the About Me section.</p>
+    </section>
+
+    <section id="research" style="display:none">
+      <h2>Research</h2>
+      <p>This is the Research section.</p>
+    </section>
+
+    <section id="publications" style="display:none">
+      <h2>Publications</h2>
+      <p>This is the Publications section.</p>
+    </section>
+  </main>
+</div>
+
+<script>
+  function showSection(id) {
+    document.querySelectorAll('main section').forEach(section => {
+      section.style.display = 'none';
+    });
+    document.getElementById(id).style.display = 'block';
+  }
+</script>
