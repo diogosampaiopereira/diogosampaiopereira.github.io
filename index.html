@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>My Academic Site</title>
+<style>
+  nav { background: #333; padding: 10px; }
+  nav button { color: white; background: none; border: none; margin: 0 10px; cursor: pointer; font-size: 16px; }
+  nav button:hover { text-decoration: underline; }
+  section { display: none; padding: 20px; }
+  section.active { display: block; }
+</style>
+</head>
+<body>
+
+<nav>
+  <button onclick="showSection('about')">About Me</button>
+  <button onclick="showSection('research')">Research</button>
+  <button onclick="showSection('publications')">Publications</button>
+</nav>
+
+<section id="about" class="active">
+  <h2>About Me</h2>
+  <p>Content for the About Me section.</p>
+</section>
+
+<section id="research">
+  <h2>Research</h2>
+  <p>Content for the Research section.</p>
+</section>
+
+<section id="publications">
+  <h2>Publications</h2>
+  <p>Content for the Publications section.</p>
+</section>
+
+<script>
+  function showSection(id) {
+    document.querySelectorAll('section').forEach((section) => {
+      section.classList.remove('active');
+    });
+    document.getElementById(id).classList.add('active');
+  }
+</script>
+
+</body>
+</html>
