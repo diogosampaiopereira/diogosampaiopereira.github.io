@@ -58,7 +58,7 @@
   .container {
     display: flex;
     max-width: 1100px;
-    margin: 40px auto 0 auto;
+    margin: 40px auto 0;
     gap: 40px;
   }
 
@@ -85,11 +85,26 @@
     font-size: 1.3em;
   }
 
-  .sidebar-info .area {
+  .area-white {
     margin-top: 6px;
-    font-style: italic;
-    color: var(--highlight);
+    color: var(--text-light);
+    font-style: normal;
     margin-bottom: 20px;
+  }
+
+  .contacts-intro {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 12px;
+    color: var(--text-light);
+    font-style: italic;
+    font-size: 0.95em;
+  }
+
+  .contacts-intro i {
+    color: var(--highlight);
+    font-size: 1.2em;
   }
 
   .contacts {
@@ -110,7 +125,7 @@
 
   main {
     flex: 1;
-    padding: 30px 30px;
+    padding: 30px;
     background: var(--card-bg);
     border-radius: 16px;
     box-shadow: 0 4px 16px var(--shadow);
@@ -121,13 +136,11 @@
     margin-top: 0;
   }
 
-  p {
+  p, ul, li {
     color: var(--text-medium);
     line-height: 1.7;
-    margin-bottom: 16px;
   }
 
-  /* ===== Subtitles for About, Education, Acknowledgements ===== */
   .subsection-title {
     font-size: 1.4em;
     color: var(--highlight);
@@ -154,8 +167,7 @@
     margin: 4px 0;
   }
 
-
- .award-card {
+  .award-card {
     background: rgba(59, 130, 246, 0.15);
     border-left: 6px solid var(--highlight);
     padding: 16px 24px;
@@ -210,23 +222,22 @@
     <div class="sidebar-info">
       <strong>Diogo Pereira</strong><br>
       PhD Student at Instituto Superior Técnico
-      <div class="area">Area: Materials Engineering</div>
+      <div class="area-white">Area: Materials Engineering</div>
+
+      <div class="contacts-intro">
+        <i class="fa-solid fa-handshake-angle"></i>
+        <span>Let's join forces to advance materials science and bring fusion energy closer to reality!</span>
+      </div>
 
       <div class="contacts">
         <p><i class="fa-solid fa-envelope"></i> 
-          <a href="mailto:diogosampaiopereira@tecnico.ulisboa.pt" target="_blank">
-            diogosampaiopereira@tecnico.ulisboa.pt
-          </a>
+          <a href="mailto:diogosampaiopereira@tecnico.ulisboa.pt" target="_blank">diogosampaiopereira@tecnico.ulisboa.pt</a>
         </p>
         <p><i class="fa-brands fa-linkedin"></i>          
-          <a href="https://www.linkedin.com/in/diogosampaiopereira/" target="_blank">
-            linkedin.com/in/diogosampaiopereira/
-          </a>
+          <a href="https://www.linkedin.com/in/diogosampaiopereira/" target="_blank">linkedin.com/in/diogosampaiopereira/</a>
         </p>
         <p><i class="fa-brands fa-orcid"></i> 
-          <a href="https://orcid.org/0009-0006-3506-8795" target="_blank">
-            orcid.org/0009-0006-3506-8795
-          </a>
+          <a href="https://orcid.org/0009-0006-3506-8795" target="_blank">orcid.org/0009-0006-3506-8795</a>
         </p>
       </div>
     </div>
@@ -234,7 +245,6 @@
 
   <main>
     <section id="about" class="active">
-      <!-- Subsection 1: About Me -->
       <div class="subsection-title">About Me</div>
       <p>
         Hi! My name is <strong>Diogo Pereira</strong> and I am a PhD student in 
@@ -254,7 +264,6 @@
         coatings for nuclear fusion applications.
       </p>
 
-      <!-- Subsection 2: Education -->
       <div class="subsection-title">Education</div>
       <div class="edu-card">
         <h3>BSc in Materials Engineering</h3>
@@ -272,9 +281,8 @@
         <p>[Starting 2025]</p>
       </div>
 
-      <!-- Subsection 3: Acknowledgements and Awards -->
       <div class="subsection-title">Acknowledgements and Awards</div>
-     <p><strong>Awarded by the Pedagogical Council of IST:</strong></p>
+      <p><strong>Awarded by the Pedagogical Council of IST:</strong></p>
 
       <div class="award-card">
         <h3>Academic Excellence Diploma 2020/2021</h3>
@@ -288,7 +296,7 @@
 
       <div class="award-card">
         <h3>Academic Excellence Diploma 2022/2023</h3>
-        <a href="diplomas/A-EN-2024-diplomas-mestrado5.pdf" target="_blank">Download Diploma (PDF)</a>
+        <a href="diplomas/excellence_2022-2023.pdf" target="_blank">Download Diploma (PDF)</a>
       </div>
 
       <div class="award-card">
@@ -300,33 +308,6 @@
         <h3>Academic Merit Diploma 2019/2020</h3>
         <a href="diplomas/PUof6m4sCqOR5xRG-2021-diplomas-merito-EN-B_ist196115.pdf" target="_blank">Download Diploma (PDF)</a>
       </div>
-    </section>
-
-    <section id="research" style="display:none">
-      <h2>Research</h2>
-      <p>This is the Research section.</p>
-    </section>
-
-    <section id="publications" style="display:none">
-      <h2>Publications</h2>
-      <p>This is the Publications section.</p>
-    </section>
-  </main>
-</div>
-
-<script>
-  function showSection(id) {
-    document.querySelectorAll('main section').forEach(section => {
-      section.style.display = 'none';
-    });
-    document.getElementById(id).style.display = 'block';
-  }
-</script>
-
-
-  
-</div>
-      </p>
     </section>
 
     <section id="research" style="display:none">
