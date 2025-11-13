@@ -182,11 +182,15 @@
 
   .ongoing-text {
     flex: 1 1 400px;
+    color: var(--text-light);
   }
 
   .graphical-abstract {
     flex: 1 1 300px;
     max-width: 320px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .graphical-abstract img {
@@ -200,6 +204,14 @@
     margin-left: 12px;
   }
 
+  /* Custom interrogation figure styling */
+  .interrogation-figure {
+    max-width: 250px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 32px;
+    display: block;
+  }
 </style>
 </head>
 <body>
@@ -293,7 +305,7 @@
 
       <div class="award-card">
         <h3>Academic Excellence Diploma 2022/2023</h3>
-        <a href="diplomas/excellence_2022-2023.pdf" target="_blank">Download Diploma (PDF)</a>
+        <a href="diplomas/A-EN-2024-diplomas-mestrado.pdf" target="_blank">Download Diploma (PDF)</a>
       </div>
 
       <div class="award-card">
@@ -321,20 +333,41 @@
         </ul>
       </div>
 
-      <div class="research-box">
-        <h3>Ongoing Projects 
-          <i class="fa-solid fa-question-circle question-icon" title="Research Question"></i>
-        </h3>
-        <p><strong>PhD project:</strong> Oxidation behaviour of boron coatings for nuclear fusion applications</p>
+      <div class="research-box ongoing-project">
+        <div class="ongoing-text">
+          <h3>Ongoing Projects 
+            <i class="fa-solid fa-question-circle question-icon" title="Research Question"></i>
+          </h3>
+          <p><strong>PhD project:</strong> Oxidation behaviour of boron coatings for nuclear fusion applications</p>
 
-        <p>
-          The new International Thermonuclear Experimental Reactor (ITER) baseline includes the change of first wall material from beryllium (Be) to tungsten (W) due to Be’s toxicity and concerns regarding high erosion and tritium (T) retention rates. However, the use of W introduces the risk of high-Z impurity release into the core plasma reducing reactor efficiency.
-          To mitigate this issue and facilitate plasma startup after maintenance periods by reducing oxygen impurity levels, ITER will implement a boronisation system. This process will involve the deposition of thin boron (B) layers onto W surfaces, leveraging B’s low atomic number to minimise radiative losses and, more importantly, its excellent oxygen-gettering properties.
-        </p>
+          <p>
+            The new International Thermonuclear Experimental Reactor (ITER) baseline includes the change of first wall material from beryllium (Be) to tungsten (W) due to Be’s toxicity 
+            and concerns regarding high erosion and tritium (T) retention rates. However, tungsten introduces the risk of high-Z impurity release into the core plasma reducing reactor efficiency.
+          </p>
+          <p>
+            To mitigate this issue and facilitate plasma startup after maintenance periods by reducing oxygen impurity levels, ITER will implement a boronisation system. 
+            This process involves deposition of thin boron (B) layers onto W surfaces, leveraging B’s low atomic number to minimise radiative losses and its excellent oxygen-gettering properties.
+          </p>
+
+          <p>Currently, little is known about the oxidation behaviour of boron under reactor conditions, including:</p>
+          <ul>
+            <li>What reactions can occur in the presence of humidity?</li>
+            <li>How do these reactions affect the oxygen-gettering ability of boron?</li>
+            <li>How do they affect fuel retention on the walls (deuterium and tritium)?</li>
+            <li>How thick should the coatings be?</li>
+          </ul>
+
+          <p><strong>My goal is to answer some of these questions!</strong></p>
+        </div>
 
         <div class="graphical-abstract">
           <img src="bbb.png" alt="Graphical abstract of oxidation behaviour study" />
         </div>
+      </div>
+
+      <div class="graphical-abstract">
+        <!-- Replace with your actual interrogation question figure path or URL -->
+        <img src="ccc.png" alt="Interrogation Question Figure" class="interrogation-figure" />
       </div>
     </section>
 
@@ -348,7 +381,7 @@
         <h3>Master Thesis</h3>
         <p><em>Enhancing Tungsten’s Nitride Formation with Ion Implantation Technique</em></p>
         <p>
-          <a href="https://example.com/your-master-thesis" target="_blank" style="color: var(--highlight); font-weight: 600; text-decoration: none;">
+          <a href="https://fenix.tecnico.ulisboa.pt/cursos/memat/dissertacao/1691203502344976" target="_blank" style="color: var(--highlight); font-weight: 600; text-decoration: none;">
             View Master Thesis
           </a>
         </p>
@@ -369,4 +402,5 @@
 
 </body>
 </html>
+
 
