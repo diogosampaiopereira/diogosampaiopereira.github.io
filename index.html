@@ -132,22 +132,26 @@
     color: var(--text-medium);
   }
 
-  h2 {
+  /* Updated Section and Subsection Titles to match Publications style */
+  section h2, .subsection-title {
+    font-weight: 600;
     color: var(--highlight);
-    margin-top: 0;
+    margin-top: 30px;
+    margin-bottom: 14px;
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+
+  section h2 {
+    font-size: 1.6em;
+  }
+
+  .subsection-title {
+    font-size: 1.3em;
   }
 
   p, ul, li {
     line-height: 1.7;
-  }
-
-  .subsection-title {
-    font-size: 1.4em;
-    color: var(--highlight);
-    border-bottom: 2px solid var(--highlight);
-    padding-bottom: 6px;
-    margin-top: 40px;
-    margin-bottom: 18px;
   }
 
   .edu-card, .award-card, .research-box {
@@ -173,44 +177,19 @@
     text-decoration: underline;
   }
 
-  /* Research - ongoing project layout */
-  .ongoing-project {
-    display: flex;
-    gap: 24px;
-    flex-wrap: wrap;
-  }
-
-  .ongoing-text {
-    flex: 1 1 400px;
-    color: var(--text-light);
-  }
-
+  /* Graphical abstract centered wide */
   .graphical-abstract {
-    flex: 1 1 300px;
-    max-width: 320px;
+    max-width: 90%;
+    margin: 40px auto;
     display: flex;
     justify-content: center;
-    align-items: center;
   }
 
   .graphical-abstract img {
     width: 100%;
+    height: auto;
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.4);
-  }
-
-  .question-icon {
-    color: var(--highlight);
-    margin-left: 12px;
-  }
-
-  /* Custom interrogation figure styling */
-  .interrogation-figure {
-    max-width: 250px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 32px;
-    display: block;
   }
 </style>
 </head>
@@ -320,7 +299,7 @@
     </section>
 
     <section id="research" style="display:none">
-      <div class="subsection-title">Research</div>
+      <h2>Research</h2>
 
       <div class="research-box">
         <h3>Research Interests</h3>
@@ -329,45 +308,35 @@
           <li>Surface modification</li>
           <li>Ion implantation</li>
           <li>Coating deposition techniques</li>
-          <!-- Add more interests if needed -->
         </ul>
       </div>
 
-      <div class="research-box ongoing-project">
-        <div class="ongoing-text">
-          <h3>Ongoing Projects 
-            <i class="fa-solid fa-question-circle question-icon" title="Research Question"></i>
-          </h3>
-          <p><strong>PhD project:</strong> Oxidation behaviour of boron coatings for nuclear fusion applications</p>
+      <div class="research-box">
+        <h3>Ongoing Projects</h3>
+        <p><strong>PhD project:</strong> Oxidation behaviour of boron coatings for nuclear fusion applications</p>
 
-          <p>
-            The new International Thermonuclear Experimental Reactor (ITER) baseline includes the change of first wall material from beryllium (Be) to tungsten (W) due to Be’s toxicity 
-            and concerns regarding high erosion and tritium (T) retention rates. However, tungsten introduces the risk of high-Z impurity release into the core plasma reducing reactor efficiency.
-          </p>
-          <p>
-            To mitigate this issue and facilitate plasma startup after maintenance periods by reducing oxygen impurity levels, ITER will implement a boronisation system. 
-            This process involves deposition of thin boron (B) layers onto W surfaces, leveraging B’s low atomic number to minimise radiative losses and its excellent oxygen-gettering properties.
-          </p>
-
-          <p>Currently, little is known about the oxidation behaviour of boron under reactor conditions, including:</p>
-          <ul>
-            <li>What reactions can occur in the presence of humidity?</li>
-            <li>How do these reactions affect the oxygen-gettering ability of boron?</li>
-            <li>How do they affect fuel retention on the walls (deuterium and tritium)?</li>
-            <li>How thick should the coatings be?</li>
-          </ul>
-
-          <p><strong>My goal is to answer some of these questions!</strong></p>
-        </div>
+        <p>
+          The new International Thermonuclear Experimental Reactor (ITER) baseline includes the change of first wall material from beryllium (Be) to tungsten (W) due to Be’s toxicity 
+          and concerns regarding high erosion and tritium (T) retention rates. However, tungsten introduces the risk of high-Z impurity release into the core plasma reducing reactor efficiency.
+        </p>
+        <p>
+          To mitigate this issue and facilitate plasma startup after maintenance periods by reducing oxygen impurity levels, ITER will implement a boronisation system. 
+          This process involves deposition of thin boron (B) layers onto W surfaces, leveraging B’s low atomic number to minimise radiative losses and its excellent oxygen-gettering properties.
+        </p>
 
         <div class="graphical-abstract">
           <img src="bbb.png" alt="Graphical abstract of oxidation behaviour study" />
         </div>
-      </div>
 
-      <div class="graphical-abstract">
-        <!-- Replace with your actual interrogation question figure path or URL -->
-        <img src="ccc.png" alt="Interrogation Question Figure" class="interrogation-figure" />
+        <p>Currently, little is known about the oxidation behaviour of boron under reactor conditions, including:</p>
+        <ul>
+          <li>What reactions can occur in the presence of humidity?</li>
+          <li>How do these reactions affect the oxygen-gettering ability of boron?</li>
+          <li>How do they affect fuel retention on the walls (deuterium and tritium)?</li>
+          <li>How thick should the coatings be?</li>
+        </ul>
+
+        <p><strong>My goal is to answer some of these questions!</strong></p>
       </div>
     </section>
 
@@ -387,7 +356,6 @@
         </p>
       </div>
     </section>
-
   </main>
 </div>
 
@@ -402,5 +370,4 @@
 
 </body>
 </html>
-
 
