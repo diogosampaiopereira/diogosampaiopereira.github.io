@@ -154,6 +154,39 @@
     margin: 4px 0;
   }
 
+
+ .award-card {
+    background: rgba(59, 130, 246, 0.15);
+    border-left: 6px solid var(--highlight);
+    padding: 16px 24px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    transition: background-color 0.3s ease;
+  }
+
+  .award-card h3 {
+    margin-top: 0;
+    color: var(--text-light);
+  }
+
+  .award-card a {
+    color: var(--highlight);
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-block;
+    margin-top: 6px;
+  }
+
+  .award-card a:hover {
+    text-decoration: underline;
+    color: #2563eb;
+  }
+
+  .award-card:hover {
+    background: rgba(59, 130, 246, 0.3);
+    cursor: pointer;
+  } 
+
   aside:hover, main:hover {
     transform: translateY(-2px);
     transition: transform 0.3s ease;
@@ -241,15 +274,58 @@
 
       <!-- Subsection 3: Acknowledgements and Awards -->
       <div class="subsection-title">Acknowledgements and Awards</div>
-      <p>
-        Recipient of the <strong>FCT Doctoral Grant (2025–2029)</strong> for research on boron coatings 
-        for nuclear fusion materials.
-      </p>
-      <p>
-        Acknowledgement to the 
-        <a href="https://www.ipfn.tecnico.ulisboa.pt" target="_blank">IPFN</a> 
-        and <a href="https://www.inflpr.ro" target="_blank">INFLPR</a> 
-        teams for their collaboration and support.
+     <p><strong>Awarded by the Pedagogical Council of IST:</strong></p>
+
+      <div class="award-card">
+        <h3>Academic Excellence Diploma 2020/2021</h3>
+        <a href="diplomas/A-EN-Mestrados-integrados_ist196115.pdf" target="_blank">Download Diploma (PDF)</a>
+      </div>
+
+      <div class="award-card">
+        <h3>Academic Excellence Diploma 2021/2022</h3>
+        <a href="diplomas/A-licenciaturas-EN (2).pdf" target="_blank">Download Diploma (PDF)</a>
+      </div>
+
+      <div class="award-card">
+        <h3>Academic Excellence Diploma 2022/2023</h3>
+        <a href="diplomas/excellence_2022-2023.pdf" target="_blank">Download Diploma (PDF)</a>
+      </div>
+
+      <div class="award-card">
+        <h3>Academic Excellence Diploma 2023/2024</h3>
+        <a href="diplomas/Academic Excellence_2024.pdf" target="_blank">Download Diploma (PDF)</a>
+      </div>
+
+      <div class="award-card">
+        <h3>Academic Merit Diploma 2019/2020</h3>
+        <a href="diplomas/PUof6m4sCqOR5xRG-2021-diplomas-merito-EN-B_ist196115.pdf" target="_blank">Download Diploma (PDF)</a>
+      </div>
+    </section>
+
+    <section id="research" style="display:none">
+      <h2>Research</h2>
+      <p>This is the Research section.</p>
+    </section>
+
+    <section id="publications" style="display:none">
+      <h2>Publications</h2>
+      <p>This is the Publications section.</p>
+    </section>
+  </main>
+</div>
+
+<script>
+  function showSection(id) {
+    document.querySelectorAll('main section').forEach(section => {
+      section.style.display = 'none';
+    });
+    document.getElementById(id).style.display = 'block';
+  }
+</script>
+
+
+  
+</div>
       </p>
     </section>
 
