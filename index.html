@@ -4,44 +4,129 @@
 <meta charset="UTF-8" />
 <title>My Academic Site</title>
 <style>
-  nav { background: #333; padding: 10px; }
-  nav button { color: white; background: none; border: none; margin: 0 10px; cursor: pointer; font-size: 16px; }
-  nav button:hover { text-decoration: underline; }
-  section { display: none; padding: 20px; }
-  section.active { display: block; }
+  body {
+    margin: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #1b222d;
+    color: #eee;
+  }
+  header {
+    background: #232936;
+    padding: 24px 48px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .site-title {
+    font-size: 1.6em;
+    font-weight: bold;
+    letter-spacing: 1px;
+  }
+  nav {
+    display: flex;
+    gap: 32px;
+  }
+  nav a {
+    color: #eee;
+    text-decoration: none;
+    font-size: 1.1em;
+    transition: color 0.25s;
+    padding: 6px 0;
+  }
+  nav a:hover {
+    color: #51ccff;
+    border-bottom: 2px solid #51ccff;
+  }
+  .container {
+    display: flex;
+    max-width: 1100px;
+    margin: 40px auto 0 auto;
+    gap: 40px;
+  }
+  aside {
+    width: 250px;
+    background: #222a36;
+    border-radius: 10px;
+    padding: 32px 20px;
+    min-height: 350px;
+  }
+  aside img {
+    display: block;
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    margin: 0 auto 16px auto;
+    border: 4px solid #51ccff;
+    background: #fff;
+  }
+  .sidebar-info {
+    font-size: 1.03em;
+    margin-bottom: 20px;
+  }
+  main {
+    flex: 1;
+    padding: 20px 20px;
+    background: #232936;
+    border-radius: 10px;
+    min-height: 350px;
+  }
+  h2 {
+    color: #51ccff;
+    margin-top: 0;
+  }
 </style>
 </head>
 <body>
 
-<nav>
-  <button onclick="showSection('about')">About Me</button>
-  <button onclick="showSection('research')">Research</button>
-  <button onclick="showSection('publications')">Publications</button>
-</nav>
+<header>
+  <div class="site-title">Your Name</div>
+  <nav>
+    <a href="#" onclick="showSection('about')">About Me</a>
+    <a href="#" onclick="showSection('research')">Research</a>
+    <a href="#" onclick="showSection('publications')">Publications</a>
+    <a href="#" onclick="showSection('cv')">CV</a>
+  </nav>
+</header>
 
-<section id="about" class="active">
-  <h2>About Me</h2>
-  <p>Content for the About Me section.</p>
-</section>
-
-<section id="research">
-  <h2>Research</h2>
-  <p>Content for the Research section.</p>
-</section>
-
-<section id="publications">
-  <h2>Publications</h2>
-  <p>Content for the Publications section.</p>
-</section>
-
+<div class="container">
+  <aside>
+    <img src="your_photo.jpg" alt="Your Photo" />
+    <div class="sidebar-info">
+      <strong>Your Name</strong><br>
+      Your academic title<br>
+      Areas: Example, Example<br>
+      <br>
+      Location: City, Country<br>
+      <a href="mailto:your@email.com" style="color:#51ccff;">Email</a> | <a href="https://twitter.com/" style="color:#51ccff;">Twitter</a> <br>
+      <a href="https://github.com/" style="color:#51ccff;">GitHub</a>
+    </div>
+  </aside>
+  <main>
+    <section id="about" class="active">
+      <h2>About Me</h2>
+      <p>This is the About Me section.</p>
+    </section>
+    <section id="research" style="display:none">
+      <h2>Research</h2>
+      <p>This is the Research section.</p>
+    </section>
+    <section id="publications" style="display:none">
+      <h2>Publications</h2>
+      <p>This is the Publications section.</p>
+    </section>
+    <section id="cv" style="display:none">
+      <h2>CV</h2>
+      <p>Download my <a href="cv.pdf" style="color:#51ccff;">CV (PDF)</a>.</p>
+    </section>
+  </main>
+</div>
 <script>
   function showSection(id) {
-    document.querySelectorAll('section').forEach((section) => {
-      section.classList.remove('active');
+    document.querySelectorAll('main section').forEach((section) => {
+      section.style.display = 'none';
     });
-    document.getElementById(id).classList.add('active');
+    document.getElementById(id).style.display = 'block';
   }
 </script>
-
 </body>
 </html>
