@@ -6,34 +6,35 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <style>
   :root {
-    --bg-color: #1f2937;        /* soft dark blue-gray */
-    --card-bg: #273549;         /* darker card background */
-    --highlight: #00b4d8;       /* teal accent */
-    --text-light: #f1f5f9;
-    --text-medium: #cbd5e1;
+    --bg-color: #f7faff;         /* very light blue background */
+    --card-bg: #ffffff;          /* white cards */
+    --highlight: #0077ff;        /* vibrant blue accent */
+    --text-dark: #1e293b;        /* dark navy text */
+    --text-medium: #475569;      /* medium gray-blue text */
+    --shadow-light: rgba(0, 0, 0, 0.08);
   }
 
   body {
     margin: 0;
     font-family: 'Segoe UI', Arial, sans-serif;
     background: var(--bg-color);
-    color: var(--text-light);
+    color: var(--text-dark);
   }
 
   header {
-    background: #324256;
+    background: #e9f1ff;
     padding: 24px 48px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    box-shadow: 0 2px 6px var(--shadow-light);
+    border-bottom: 2px solid #d6e4ff;
   }
 
   .site-title {
     font-size: 1.8em;
     font-weight: bold;
-    letter-spacing: 0.5px;
-    color: var(--text-light);
+    color: var(--highlight);
   }
 
   nav {
@@ -67,7 +68,7 @@
     background: var(--card-bg);
     border-radius: 16px;
     padding: 32px 24px;
-    box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+    box-shadow: 0 4px 16px var(--shadow-light);
     text-align: center;
   }
 
@@ -84,7 +85,7 @@
 
   .sidebar-info strong {
     font-size: 1.3em;
-    color: #ffffff;
+    color: var(--text-dark);
   }
 
   .sidebar-info {
@@ -123,7 +124,7 @@
     padding: 30px 30px;
     background: var(--card-bg);
     border-radius: 16px;
-    box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+    box-shadow: 0 4px 16px var(--shadow-light);
     min-height: 350px;
   }
 
@@ -134,6 +135,12 @@
 
   p {
     color: var(--text-medium);
+  }
+
+  /* Subtle hover effect on sidebar and main */
+  aside:hover, main:hover {
+    transform: translateY(-2px);
+    transition: transform 0.3s ease;
   }
 </style>
 </head>
@@ -157,9 +164,9 @@
       <div class="area">Area: Materials Engineering</div>
 
       <div class="contacts">
-        <p><i class="fa-solid fa-envelope"></i> <a href="mailto:your@email.com">your@email.com</a></p>
-        <p><i class="fa-brands fa-linkedin"></i> <a href="https://linkedin.com/in/yourprofile">linkedin.com/in/yourprofile</a></p>
-        <p><i class="fa-brands fa-orcid"></i> <a href="https://orcid.org/your-orcid-id">orcid.org/your-orcid-id</a></p>
+        <p><i class="fa-solid fa-envelope"></i> <a href="mailto:your@email.com">diogosampaiopereira@tecnico.ulisboa.pt</a></p>
+        <p><i class="fa-brands fa-linkedin"></i> <a href="https://linkedin.com/in/yourprofile">https://www.linkedin.com/in/diogosampaiopereira/</a></p>
+        <p><i class="fa-brands fa-orcid"></i> <a href="https://orcid.org/your-orcid-id">https://orcid.org/0009-0006-3506-8795</a></p>
       </div>
     </div>
   </aside>
@@ -190,3 +197,6 @@
     document.getElementById(id).style.display = 'block';
   }
 </script>
+
+</body>
+</html>
