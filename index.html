@@ -11,38 +11,36 @@
 
 <style>
   :root {
-    --bg-color: #0e1628;
-    --header-bg: linear-gradient(135deg, #23395d, #2a3f73);
-    --card-bg: #1f2a44;
-    --highlight: #4fc1e9;
-    --text-light: #e0e7ff;
-    --text-medium: #a4baff;
-    --shadow: rgba(0, 0, 0, 0.45);
-    --radius: 16px;
+    --bg-color: #ffffff;
+    --header-bg: linear-gradient(135deg, #3b82f6, #2563eb);
+    --card-bg: #f9fafb;
+    --highlight: #2563eb;
+    --text-dark: #1e293b;
+    --text-medium: #475569;
+    --shadow: rgba(0, 0, 0, 0.1);
+    --radius: 12px;
     --transition: 0.3s ease;
     --font: 'Inter', 'Segoe UI', Arial, sans-serif;
   }
 
-  /* Global resets and base */
   body {
     margin: 0;
     font-family: var(--font);
     background: var(--bg-color);
-    color: var(--text-light);
+    color: var(--text-dark);
     min-height: 100vh;
-    line-height: 1.65;
+    line-height: 1.6;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
 
-  /* Header with sticky shadow */
   header {
     background: var(--header-bg);
     padding: 20px 48px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    box-shadow: 0 5px 20px var(--shadow);
+    box-shadow: 0 5px 15px var(--shadow);
     position: sticky;
     top: 0;
     z-index: 100;
@@ -51,7 +49,7 @@
   .site-title {
     font-size: 2rem;
     font-weight: 700;
-    color: var(--text-light);
+    color: white;
     letter-spacing: 0.05em;
     user-select:none;
   }
@@ -62,7 +60,7 @@
   }
 
   nav a {
-    color: var(--text-medium);
+    color: #cbd5e1;
     font-weight: 600;
     font-size: 1.05rem;
     text-decoration: none;
@@ -78,14 +76,14 @@
     left: 0; bottom: 0;
     width: 0;
     height: 2.5px;
-    background: var(--highlight);
+    background: white;
     border-radius: 2px;
     transition: width var(--transition);
   }
 
   nav a:hover,
   nav a:focus {
-    color: var(--highlight);
+    color: white;
   }
 
   nav a:hover::after,
@@ -93,23 +91,21 @@
     width: 100%;
   }
 
-  /* Container for sidebar and main */
   .container {
-    max-width: 1200px;
+    max-width: 1100px;
     margin: 48px auto;
-    padding: 0 24px;
+    padding: 0 20px;
     display: flex;
-    gap: 48px;
+    gap: 40px;
     flex-wrap: wrap;
     justify-content: center;
   }
 
-  /* Sidebar styles */
   aside {
     flex: 0 0 280px;
     background: var(--card-bg);
     border-radius: var(--radius);
-    box-shadow: 0 10px 30px var(--shadow);
+    box-shadow: 0 8px 25px var(--shadow);
     padding: 36px 28px;
     text-align: center;
     transition: transform var(--transition);
@@ -126,20 +122,18 @@
     border: 4px solid var(--highlight);
     object-fit: cover;
     margin-bottom: 24px;
-    background: #fff;
   }
 
   .sidebar-info strong {
     font-size: 1.4rem;
-    color: var(--text-light);
+    color: var(--text-dark);
     display: block;
     margin-bottom: 4px;
   }
 
   .area-white {
     font-style: normal;
-    color: var(--text-light);
-    opacity: 0.85;
+    color: var(--text-medium);
     margin-bottom: 24px;
     font-weight: 500;
     font-size: 1rem;
@@ -147,8 +141,8 @@
 
   .contacts-intro {
     font-style: italic;
-    color: var(--text-light);
-    opacity: 0.9;
+    color: var(--text-dark);
+    opacity: 0.8;
     font-size: 0.95rem;
     margin-bottom: 20px;
     display: flex;
@@ -171,13 +165,14 @@
     display: flex;
     align-items: center;
     font-weight: 500;
+    color: var(--text-dark);
   }
 
   .contacts i {
     color: var(--highlight);
     margin-right: 12px;
-    font-size: 1.2rem;
-    min-width: 24px;
+    font-size: 1.25rem;
+    min-width: 28px;
     text-align: center;
   }
 
@@ -192,42 +187,39 @@
     text-decoration: underline;
   }
 
-  /* Main content styles */
   main {
     flex: 1;
     background: var(--card-bg);
     border-radius: var(--radius);
-    box-shadow: 0 10px 30px var(--shadow);
+    box-shadow: 0 8px 25px var(--shadow);
     padding: 40px 50px;
     color: var(--text-medium);
     min-width: 320px;
   }
 
-  /* Headings styling */
   section h2, .subsection-title {
     color: var(--highlight);
     font-weight: 700;
-    font-size: 1.65rem;
+    font-size: 1.7rem;
     margin-top: 36px;
     margin-bottom: 20px;
     letter-spacing: 0.06em;
-    border-bottom: 2px solid rgba(79,193,233,0.4);
+    border-bottom: 2px solid rgba(37, 99, 235, 0.4);
     padding-bottom: 6px;
   }
 
-  /* Paragraph and list styling */
   p, ul, li {
     font-weight: 400;
     font-size: 1rem;
+    color: var(--text-dark);
   }
 
   ul {
-    padding-left: 18px;
+    padding-left: 20px;
   }
 
-  /* Cards for Education, Awards, Research */
   .edu-card, .award-card, .research-box {
-    background: rgba(79, 193, 233, 0.08);
+    background: #e6f0ff;
     border-left: 5px solid var(--highlight);
     padding: 20px 24px;
     border-radius: var(--radius);
@@ -236,13 +228,13 @@
   }
 
   .edu-card:hover, .award-card:hover, .research-box:hover {
-    background: rgba(79,193,233,0.15);
+    background: #d0e3ff;
     transform: translateY(-4px);
   }
 
   .edu-card h3, .award-card h3, .research-box h3 {
     margin: 0 0 12px;
-    color: var(--text-light);
+    color: var(--text-dark);
   }
 
   .award-card a, .edu-card a, .research-box a {
@@ -255,7 +247,6 @@
     text-decoration: underline;
   }
 
-  /* Graphical abstract centered image */
   .graphical-abstract {
     max-width: 90%;
     margin: 48px auto;
@@ -263,13 +254,12 @@
   }
 
   .graphical-abstract img {
-    width: 100%;
+    max-width: 100%;
     height: auto;
     border-radius: var(--radius);
-    box-shadow: 0 5px 20px rgba(0,0,0,0.45);
+    box-shadow: 0 5px 20px rgba(37, 99, 235, 0.25);
   }
 
-  /* Responsive adjustments */
   @media (max-width: 900px) {
     .container {
       flex-direction: column;
@@ -468,3 +458,4 @@
 
 </body>
 </html>
+
