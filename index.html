@@ -4,30 +4,30 @@
 <meta charset="UTF-8" />
 <title>Diogo Pereira - Academic Site</title>
 
-<!-- Import warm serif and modern sans-serif fonts -->
-<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Montserrat:wght@600&display=swap" rel="stylesheet">
+<!-- Import modern Google font -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
   :root {
     --bg-color: #ffffff;
-    --card-bg: #1e3a8a;
+    --header-bg: linear-gradient(135deg, #3b82f6, #2563eb);
+    --card-bg: #f9fafb;
     --highlight: #2563eb;
-    --text-light: #e0e7ff;
-    --text-box-dark: #cbd5e1;
-    --radius: 14px;
+    --text-dark: #1e293b;
+    --text-medium: #475569;
+    --shadow: rgba(0, 0, 0, 0.1);
+    --radius: 12px;
     --transition: 0.3s ease;
-    --shadow: rgba(0, 0, 0, 0.15);
-    --font-body: 'Merriweather', serif;
-    --font-heading: 'Montserrat', sans-serif;
+    --font: 'Inter', 'Segoe UI', Arial, sans-serif;
   }
 
   body {
     margin: 0;
-    font-family: var(--font-body);
+    font-family: var(--font);
     background: var(--bg-color);
-    color: #1e293b;
+    color: var(--text-dark);
     min-height: 100vh;
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
@@ -35,39 +35,38 @@
   }
 
   header {
-    background: var(--highlight);
-    padding: 18px 48px;
+    background: var(--header-bg);
+    padding: 20px 48px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    box-shadow: 0 5px 20px var(--shadow);
+    box-shadow: 0 5px 15px var(--shadow);
     position: sticky;
     top: 0;
     z-index: 100;
   }
 
   .site-title {
-    font-family: var(--font-heading);
     font-size: 2rem;
     font-weight: 700;
-    color: var(--text-light);
-    letter-spacing: 0.03em;
+    color: white;
+    letter-spacing: 0.05em;
     user-select:none;
   }
 
   nav {
     display: flex;
-    gap: 30px;
+    gap: 32px;
   }
 
   nav a {
-    color: var(--text-light);
-    font-family: var(--font-heading);
+    color: #cbd5e1;
     font-weight: 600;
     font-size: 1.05rem;
     text-decoration: none;
-    padding-bottom: 5px;
     position: relative;
+    padding-bottom: 4px;
+    transition: color var(--transition);
     cursor: pointer;
   }
 
@@ -76,15 +75,15 @@
     position: absolute;
     left: 0; bottom: 0;
     width: 0;
-    height: 3px;
-    background: var(--text-light);
+    height: 2.5px;
+    background: white;
     border-radius: 2px;
     transition: width var(--transition);
   }
 
   nav a:hover,
   nav a:focus {
-    color: var(--highlight);
+    color: white;
   }
 
   nav a:hover::after,
@@ -109,9 +108,7 @@
     box-shadow: 0 8px 25px var(--shadow);
     padding: 36px 28px;
     text-align: center;
-    color: var(--text-light);
     transition: transform var(--transition);
-    font-family: var(--font-body);
   }
 
   aside:hover {
@@ -129,14 +126,14 @@
 
   .sidebar-info strong {
     font-size: 1.4rem;
-    color: var(--text-light);
+    color: var(--text-dark);
     display: block;
     margin-bottom: 4px;
   }
 
   .area-white {
     font-style: normal;
-    color: var(--text-box-dark);
+    color: var(--text-medium);
     margin-bottom: 24px;
     font-weight: 500;
     font-size: 1rem;
@@ -144,7 +141,7 @@
 
   .contacts-intro {
     font-style: italic;
-    color: var(--text-light);
+    color: var(--text-dark);
     opacity: 0.8;
     font-size: 0.95rem;
     margin-bottom: 20px;
@@ -168,7 +165,7 @@
     display: flex;
     align-items: center;
     font-weight: 500;
-    color: var(--text-light);
+    color: var(--text-dark);
   }
 
   .contacts i {
@@ -182,8 +179,8 @@
   .contacts a {
     color: var(--highlight);
     text-decoration: none;
-    font-weight: 600;
     word-break: break-word;
+    font-weight: 600;
   }
 
   .contacts a:hover, .contacts a:focus {
@@ -196,27 +193,25 @@
     border-radius: var(--radius);
     box-shadow: 0 8px 25px var(--shadow);
     padding: 40px 50px;
-    color: var(--text-light);
-    font-family: var(--font-body);
+    color: var(--text-medium);
     min-width: 320px;
   }
 
   section h2, .subsection-title {
     color: var(--highlight);
-    font-family: var(--font-heading);
     font-weight: 700;
     font-size: 1.7rem;
     margin-top: 36px;
     margin-bottom: 20px;
+    letter-spacing: 0.06em;
     border-bottom: 2px solid rgba(37, 99, 235, 0.4);
     padding-bottom: 6px;
-    letter-spacing: 0.06em;
   }
 
   p, ul, li {
     font-weight: 400;
     font-size: 1rem;
-    color: var(--text-light);
+    color: var(--text-dark);
   }
 
   ul {
@@ -224,23 +219,22 @@
   }
 
   .edu-card, .award-card, .research-box {
-    background: #162c6b;
+    background: #e6f0ff;
     border-left: 5px solid var(--highlight);
     padding: 20px 24px;
     border-radius: var(--radius);
     margin-bottom: 28px;
     transition: background var(--transition), transform var(--transition);
-    color: var(--text-light);
   }
 
   .edu-card:hover, .award-card:hover, .research-box:hover {
-    background: #1a3e9a;
+    background: #d0e3ff;
     transform: translateY(-4px);
   }
 
   .edu-card h3, .award-card h3, .research-box h3 {
     margin: 0 0 12px;
-    color: var(--text-light);
+    color: var(--text-dark);
   }
 
   .award-card a, .edu-card a, .research-box a {
@@ -263,7 +257,7 @@
     max-width: 100%;
     height: auto;
     border-radius: var(--radius);
-    box-shadow: 0 5px 20px rgba(37, 99, 235, 0.5);
+    box-shadow: 0 5px 20px rgba(37, 99, 235, 0.25);
   }
 
   @media (max-width: 900px) {
@@ -278,6 +272,7 @@
       width: 100%;
       max-width: 360px;
       margin-bottom: 36px;
+      box-shadow: 0 8px 28px var(--shadow);
     }
 
     main {
@@ -330,17 +325,17 @@
       <p>
         Hi! My name is <strong>Diogo Pereira</strong> and I am a PhD student in 
         Materials Engineering at 
-        <a href="https://tecnico.ulisboa.pt" target="_blank" rel="noopener" style="color: var(--text-light); text-decoration: underline;">Instituto Superior Técnico</a>.
+        <a href="https://tecnico.ulisboa.pt" target="_blank" rel="noopener">Instituto Superior Técnico</a>.
         I am part of the Materials Processing and Characterisation group at the 
-        <a href="https://www.ipfn.tecnico.ulisboa.pt" target="_blank" rel="noopener" style="color: var(--text-light); text-decoration: underline;">Instituto de Plasma e Fusão Nuclear (IPFN)</a>,
+        <a href="https://www.ipfn.tecnico.ulisboa.pt" target="_blank" rel="noopener">Instituto de Plasma e Fusão Nuclear (IPFN)</a>,
         under the supervision of 
-        <a href="https://scholar.tecnico.ulisboa.pt/authors/ist24807/records" target="_blank" rel="noopener" style="color: var(--text-light); text-decoration: underline;">Rodrigo Mateus</a>
+        <a href="https://scholar.tecnico.ulisboa.pt/authors/ist24807/records" target="_blank" rel="noopener">Rodrigo Mateus</a>
         and 
-        <a href="https://scholar.tecnico.ulisboa.pt/authors/ist25572/bio?lang=pt" target="_blank" rel="noopener" style="color: var(--text-light); text-decoration: underline;">Norberto Catarino</a>.
+        <a href="https://scholar.tecnico.ulisboa.pt/authors/ist25572/bio?lang=pt" target="_blank" rel="noopener">Norberto Catarino</a>.
       </p>
       <p>
         In collaboration with the 
-        <a href="https://www.inflpr.ro" target="_blank" rel="noopener" style="color: var(--text-light); text-decoration: underline;">National Institute for Laser, Plasma and Radiation Physics (INFLPR)</a>
+        <a href="https://www.inflpr.ro" target="_blank" rel="noopener">National Institute for Laser, Plasma and Radiation Physics (INFLPR)</a>
         in Romania, my research focuses on the oxidation behaviour of boron
         coatings for nuclear fusion applications.
       </p>
@@ -348,17 +343,17 @@
       <div class="subsection-title">Education</div>
       <div class="edu-card">
         <h3>BSc in Materials Engineering</h3>
-        <p><a href="https://tecnico.ulisboa.pt" target="_blank" rel="noopener" style="color: var(--text-light); text-decoration: underline;">Instituto Superior Técnico</a></p>
+        <p><a href="https://tecnico.ulisboa.pt" target="_blank" rel="noopener">Instituto Superior Técnico</a></p>
         <p>[2019–2022]</p>
       </div>
       <div class="edu-card">
         <h3>MSc in Materials Engineering</h3>
-        <p><a href="https://tecnico.ulisboa.pt" target="_blank" rel="noopener" style="color: var(--text-light); text-decoration: underline;">Instituto Superior Técnico</a></p>
+        <p><a href="https://tecnico.ulisboa.pt" target="_blank" rel="noopener">Instituto Superior Técnico</a></p>
         <p>[2022–2024]</p>
       </div>
       <div class="edu-card">
         <h3>PhD in Materials Engineering</h3>
-        <p><a href="https://tecnico.ulisboa.pt" target="_blank" rel="noopener" style="color: var(--text-light); text-decoration: underline;">Instituto Superior Técnico</a></p>
+        <p><a href="https://tecnico.ulisboa.pt" target="_blank" rel="noopener">Instituto Superior Técnico</a></p>
         <p>[Starting 2025]</p>
       </div>
 
@@ -367,27 +362,27 @@
 
       <div class="award-card">
         <h3>Academic Excellence Diploma 2020/2021</h3>
-        <a href="diplomas/A-EN-Mestrados-integrados_ist196115.pdf" target="_blank" rel="noopener" style="color: var(--highlight); font-weight: 600;">Download Diploma (PDF)</a>
+        <a href="diplomas/A-EN-Mestrados-integrados_ist196115.pdf" target="_blank" rel="noopener">Download Diploma (PDF)</a>
       </div>
 
       <div class="award-card">
         <h3>Academic Excellence Diploma 2021/2022</h3>
-        <a href="diplomas/A-licenciaturas-EN (2).pdf" target="_blank" rel="noopener" style="color: var(--highlight); font-weight: 600;">Download Diploma (PDF)</a>
+        <a href="diplomas/A-licenciaturas-EN (2).pdf" target="_blank" rel="noopener">Download Diploma (PDF)</a>
       </div>
 
       <div class="award-card">
         <h3>Academic Excellence Diploma 2022/2023</h3>
-        <a href="diplomas/A-EN-2024-diplomas-mestrado.pdf" target="_blank" rel="noopener" style="color: var(--highlight); font-weight: 600;">Download Diploma (PDF)</a>
+        <a href="diplomas/A-EN-2024-diplomas-mestrado.pdf" target="_blank" rel="noopener">Download Diploma (PDF)</a>
       </div>
 
       <div class="award-card">
         <h3>Academic Excellence Diploma 2023/2024</h3>
-        <a href="diplomas/Academic Excellence_2024.pdf" target="_blank" rel="noopener" style="color: var(--highlight); font-weight: 600;">Download Diploma (PDF)</a>
+        <a href="diplomas/Academic Excellence_2024.pdf" target="_blank" rel="noopener">Download Diploma (PDF)</a>
       </div>
 
       <div class="award-card">
         <h3>Academic Merit Diploma 2019/2020</h3>
-        <a href="diplomas/PUof6m4sCqOR5xRG-2021-diplomas-merito-EN-B_ist196115.pdf" target="_blank" rel="noopener" style="color: var(--highlight); font-weight: 600;">Download Diploma (PDF)</a>
+        <a href="diplomas/PUof6m4sCqOR5xRG-2021-diplomas-merito-EN-B_ist196115.pdf" target="_blank" rel="noopener">Download Diploma (PDF)</a>
       </div>
     </section>
 
